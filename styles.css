@@ -94,6 +94,8 @@ input,select,textarea{ font-family:inherit; font-size:1rem; }
 .section-head.center{ margin-left:auto; margin-right:auto; text-align:center; }
 .section-head.center .eyebrow{ margin-left:auto; margin-right:auto; }
 .section-head h2{ font-size:clamp(1.9rem,3.4vw,2.8rem); margin-bottom:18px; }
+.section-head h2.h2-tight{ font-size:clamp(1.5rem,2.8vw,2.3rem); }
+#problem .section-head h2.h2-tight{ font-size:clamp(1.3rem,2.8vw,2.3rem); }
 .section-head p{ color:var(--text-muted); font-size:1.08rem; }
 
 /* Buttons */
