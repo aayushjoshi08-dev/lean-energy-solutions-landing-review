@@ -229,6 +229,12 @@ nav.primary a:hover::after{ width:100%; }
 .hero h1{ font-size:clamp(2.4rem,4.6vw,3.85rem); margin-bottom:24px; }
 .hero-sub{ font-size:1.15rem; color:var(--text-muted); max-width:540px; margin-bottom:36px; }
 .hero-ctas{ display:flex; align-items:center; gap:18px; flex-wrap:wrap; margin-bottom:32px; }
+.hero-highlights{ display:flex; flex-wrap:wrap; gap:12px; margin-bottom:28px; }
+.hero-highlight{
+  display:inline-flex; align-items:center; gap:7px; background:var(--green-soft); color:var(--green-dark);
+  font-size:0.85rem; font-weight:700; padding:8px 16px; border-radius:100px;
+}
+.hero-highlight svg{ width:15px; height:15px; color:var(--accent); flex-shrink:0; }
 .hero-trust{ display:flex; flex-wrap:wrap; gap:22px; font-size:0.85rem; color:var(--text-faint); }
 .hero-trust li{ display:flex; align-items:center; gap:8px; }
 .hero-trust svg{ width:15px; height:15px; color:var(--green); flex-shrink:0; }

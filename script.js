@@ -184,7 +184,7 @@
     confirmText.textContent = `Thanks, ${lead.name.split(' ')[0]} — we've pencilled you in. Look out for a calendar invite at ${lead.email}.`;
     confirmDate.textContent = `${dateLabel}, ${chosenTime} EAT`;
 
-    const subject = encodeURIComponent(`Free Energy Audit Booking — ${lead.company || lead.name}`);
+    const subject = encodeURIComponent(`Free Steam Audit Booking — ${lead.company || lead.name}`);
     const body = encodeURIComponent(
       `New booking request via website:\n\n` +
       `Name: ${lead.name}\nCompany: ${lead.company}\nEmail: ${lead.email}\nPhone: ${lead.phone}\n` +
