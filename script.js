@@ -103,14 +103,7 @@
   const calTimes = document.getElementById('calTimes');
   const confirmText = document.getElementById('modalConfirmText');
   const confirmDate = document.getElementById('modalConfirmDate');
-  const modalTitle = document.getElementById('modalTitle1');
-  const confirmLabel = document.getElementById('modalConfirmLabel');
-
-  const BOOKING_TYPES = {
-    audit: { title: 'Get your free steam audit', label: 'Free steam audit call · ~15 min', subject: 'Free Steam Audit Booking' },
-    visit: { title: 'Book your free site visit', label: 'Free site visit · we\'ll call to confirm', subject: 'Free Site Visit Booking' }
-  };
-  let bookingType = 'audit';
+  const SUBJECT = 'Free Site Visit Booking';
 
   const TIME_SLOTS = ['9:00 AM', '11:00 AM', '1:00 PM', '3:00 PM', '4:30 PM'];
   let lead = null;
@@ -122,11 +115,8 @@
     modalCard.scrollTop = 0;
   };
 
-  const openModal = (e) => {
+  const openModal = () => {
     if (!modal) return;
-    bookingType = e?.currentTarget?.dataset?.booking === 'visit' ? 'visit' : 'audit';
-    if (modalTitle) modalTitle.textContent = BOOKING_TYPES[bookingType].title;
-    if (confirmLabel) confirmLabel.textContent = BOOKING_TYPES[bookingType].label;
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
     goToStep(1);
@@ -195,7 +185,7 @@
     confirmText.textContent = `Thanks, ${lead.name.split(' ')[0]} — we've pencilled you in. Look out for a calendar invite at ${lead.email}.`;
     confirmDate.textContent = `${dateLabel}, ${chosenTime} EAT`;
 
-    const subject = encodeURIComponent(`${BOOKING_TYPES[bookingType].subject} — ${lead.company || lead.name}`);
+    const subject = encodeURIComponent(`${SUBJECT} — ${lead.company || lead.name}`);
     const body = encodeURIComponent(
       `New booking request via website:\n\n` +
       `Name: ${lead.name}\nCompany: ${lead.company}\nEmail: ${lead.email}\nPhone: ${lead.phone}\n` +
