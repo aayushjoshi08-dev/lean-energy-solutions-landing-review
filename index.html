@@ -511,6 +511,19 @@
     </div>
   </section>
 
+  <!-- ============ SITE VISIT BANNER ============ -->
+  <section class="site-banner" id="site-visit">
+    <video class="site-banner-video" autoplay muted loop playsinline poster="assets/photos/site-banner.jpg" aria-hidden="true">
+      <source src="assets/videos/site-banner.mp4" type="video/mp4">
+    </video>
+    <div class="site-banner-scrim" aria-hidden="true"></div>
+    <div class="container site-banner-inner" data-reveal>
+      <span class="site-banner-eyebrow">Lean Energy Solutions</span>
+      <p class="site-banner-text">We install, own, and operate the boiler system — <span>at your site. You pay per kg of steam — zero capital outlay.</span></p>
+      <button type="button" class="site-banner-cta js-open-modal" data-booking="visit">Book a free site visit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </div>
+  </section>
+
   <!-- ============ BENEFITS ============ -->
   <section class="section benefits">
     <div class="container">
@@ -864,7 +877,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
         <div>
           <b id="modalConfirmDate">—</b>
-          <span>Free steam audit call · ~15 min</span>
+          <span id="modalConfirmLabel">Free steam audit call · ~15 min</span>
         </div>
       </div>
       <button type="button" class="btn btn-primary btn-block" id="modalDone">Done</button>
